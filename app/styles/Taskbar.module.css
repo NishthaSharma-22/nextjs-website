@@ -1,0 +1,25 @@
+.taskbar {
+  background-color: var(--color-bg);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 45px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  opacity: 90%;
+}
+.taskbarText {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.image:hover {
+  opacity: 80%;
+}
