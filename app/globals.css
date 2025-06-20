@@ -6,7 +6,7 @@
 
 :root {
   --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --color-bg: #faf7ef;
+  --color-bg: #efeeeb;
   --color-text: #4a4a4a;
   --color-primary: #f7d34f;
   --color-secondary: #f0c330;
@@ -18,38 +18,12 @@
   --color-yellow-mild: #fff3c2;
   --color-yellow-cream: #fff7d1;
 }
-html,
+
 body {
   height: 100%;
   font-family: var(--font);
-  background: var(--color-bg);
   color: var(--color-text);
-}
-.navbar {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin: 20px;
-  background: var(--color-yellow-soft);
-  border-bottom: 1px solid var(--color-accent);
-  border-radius: 10px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 5.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: var(--color-secondary);
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: var(--color-accent);
+  background-image: url("../public/desktopbg.png");
+  background-size: cover;
+  width: 100vh;
 }

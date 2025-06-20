@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px auto;
+  width: 70%;
+  background: var(--color-yellow-soft);
+  border-bottom: 1px solid var(--color-accent);
+  border-radius: 10px;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 5.5rem;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.navlinks a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--color-accent);
+}
