@@ -1,11 +1,18 @@
 .introBox {
-  border: 2px solid black;
-  width: 500px;
-  border-radius: 5px;
+  display: inline-block;
+  max-width: 600px;
+  min-width: 400px;
+  border-radius: 1px;
   padding: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--color-bg);
+  background-color: white;
+}
+
+.frameWindow {
+  border: 8px grey;
+  border-radius: 5px;
+  cursor: grab;
+  display: inline;
+  user-select: none;
+  background: grey;
+  padding: 25px 2px 2px 2px;
 }
