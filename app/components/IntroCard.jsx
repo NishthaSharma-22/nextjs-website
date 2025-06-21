@@ -5,6 +5,7 @@ import styles from "../styles/IntroCard.module.css";
 
 export default function IntroCard() {
   const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [isVisible, setIsVisible] = useState(true);
   const dragging = useRef(false);
   const offset = useRef({ x: 0, y: 0 });
 
@@ -28,6 +29,8 @@ export default function IntroCard() {
     dragging.current = false;
   };
 
+  if (!isVisible) return null;
+
   return (
     <>
       <div
@@ -41,7 +44,13 @@ export default function IntroCard() {
           position: "absolute",
         }}
       >
-        <div className={styles.introBox}>
+        <p className={styles.frameText}>Welcome</p>
+        <button className={styles.closeBtn} onClick={()=> setIsVisible(false)}>x</button>
+
+        <div
+          className={styles.introBox}
+          onMouseDown={(e) => e.stopPropagation()}
+        >
           <Image
             src="/nspfp.jpeg"
             alt="Nishtha S"

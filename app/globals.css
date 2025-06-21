@@ -5,7 +5,8 @@
 }
 
 :root {
-  --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-jm: "Jetbrains Mono";
   --color-bg: #efeeeb;
   --color-text: #4a4a4a;
   --color-primary: #f7d34f;
@@ -20,13 +21,16 @@
 }
 
 body {
-  height: 100%;
-  font-family: var(--font);
+  font-family: var(--font-jm);
   color: var(--color-text);
   background-image: url("../public/desktopbg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  height: 100vh;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
 }
