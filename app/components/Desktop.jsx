@@ -1,8 +1,8 @@
 "use client";
 import IntroCard from "./IntroCard";
 import { useState } from "react";
-import Linkedin from "./folders/Linkedin";
-import Photos from "./folders/photos";
+import Linkedin from "./iconList/Linkedin";
+import Photos from "./iconList/photos";
 
 export default function Desktop() {
   const [showWelcome, setShowWelcome] = useState(true);
