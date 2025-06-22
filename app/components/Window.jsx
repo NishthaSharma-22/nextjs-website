@@ -5,10 +5,10 @@ import styles from "../styles/Window.module.css";
 export default function Window({
   title = "window",
   initialPosition = { x: 100, y: 100 },
+  onClose,
   children,
 }) {
   const [position, setPosition] = useState(initialPosition);
-  const [isVisible, setIsVisible] = useState(true);
   const dragging = useRef(false);
   const offset = useRef({ x: 0, y: 0 });
 
@@ -32,8 +32,6 @@ export default function Window({
     dragging.current = false;
   };
 
-  if (!isVisible) return null;
-
   return (
     <>
       <div
@@ -48,13 +46,14 @@ export default function Window({
         }}
       >
         <p className={styles.frameText}>{title}</p>
-        <button className={styles.closeBtn} onClick={() => setIsVisible(false)}>
+        <button className={styles.closeBtn} onClick={(e) => {e.stopPropagation(); onClose();}}>
           x
         </button>
 
         <div
           className={styles.introBox}
-          onMouseDown={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()
+          }
         >
           {children}
         </div>

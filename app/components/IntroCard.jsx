@@ -1,9 +1,13 @@
 "use client";
 import Image from "next/image";
 import Window from "./Window";
-export default function IntroCard() {
+export default function IntroCard({ onClose }) {
   return (
-    <Window title="Welcome" initialPosition={{ x: 200, y: 150 }}>
+    <Window
+      title="Welcome"
+      initialPosition={{ x: 200, y: 150 }}
+      onClose={onClose}
+    >
       <Image
         src={"/nspfp.jpeg"}
         width={100}
