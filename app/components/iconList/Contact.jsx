@@ -6,7 +6,14 @@ export default function Contact() {
       iconSrc="/email.png"
       label="Contact"
       windowTitle="contact"
-      windowContent={<></>}
+      windowContent={
+        <>
+          <p>My github link!</p>
+          <a href="https://github.com/NishthaSharma-22" target="_blank">
+            Github
+          </a>
+        </>
+      }
     />
   );
 }
