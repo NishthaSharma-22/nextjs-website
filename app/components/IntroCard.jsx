@@ -5,7 +5,7 @@ export default function IntroCard({ onClose }) {
   return (
     <Window
       title="Welcome"
-      initialPosition={{ x: 200, y: 150 }}
+      initialPosition={{ x: 450, y: 200 }}
       onClose={onClose}
     >
       <Image

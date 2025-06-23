@@ -5,7 +5,8 @@
 }
 
 :root {
-  --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
   --font-jm: "Jetbrains Mono";
   --color-bg: #efeeeb;
   --color-text: #4a4a4a;
@@ -22,8 +23,9 @@
 
 body {
   font-family: var(--font-jm);
+  font-weight: 400;
   color: var(--color-text);
-  background-image: url("../public/desktopbg.png");
+  background-image: url("../public/lavender.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
