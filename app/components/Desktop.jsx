@@ -4,6 +4,7 @@ import { useState } from "react";
 import Linkedin from "./iconList/Linkedin";
 import Photos from "./iconList/Photos";
 import Contact from "./iconList/Contact";
+import Blog from "./iconList/Blog";
 
 export default function Desktop() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -14,6 +15,7 @@ export default function Desktop() {
       <Linkedin />
       <Photos />
       <Contact />
+      <Blog />
     </>
   );
 }

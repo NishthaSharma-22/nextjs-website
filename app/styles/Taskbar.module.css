@@ -11,6 +11,7 @@
   bottom: 0;
   z-index: 99;
   opacity: 90%;
+  user-select: none;
 }
 .taskbarText {
   color: black;
@@ -18,7 +19,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  user-select: none;
 }
 
 .image:hover {
