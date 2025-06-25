@@ -1,0 +1,48 @@
+.blogWindow {
+  display: flex;
+  height: 500px;
+  width: 1000px;
+  border-radius: 2px;
+}
+
+.sidebar {
+  width: 20%;
+  padding: 16px;
+  border-right: 1px solid grey;
+  background-color: lightgrey;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background-color: grey;
+  color: whitesmoke;
+}
+
+.sidebar .selected {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.blogContent {
+  width: 80%;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 100%;
+}
