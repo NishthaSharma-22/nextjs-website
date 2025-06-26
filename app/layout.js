@@ -1,10 +1,16 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { Jetbrains_Mono } from "next/font/google";
 import { Press_Start_2P } from "next/font/google";
+import { Source_Code_Pro } from "next/font/google";
+
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+const sourceCodePro = Source_Code_Pro({
+  variable: "--font-scp",
   subsets: ["latin"],
 });
 

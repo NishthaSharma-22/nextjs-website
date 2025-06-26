@@ -17,8 +17,8 @@ export default function IntroCard({ onClose }) {
       />
       <h1>nishthaOS</h1>
       <p>
-        NishthaOS is a feature-limites{" "}
-        <abbr title={"Operating System"}>OS</abbr> to answer the unanswerable
+        NishthaOS is a feature-limited{" "}
+        <abbr title={"Operating System"}>OS</abbr> to answer the unanswerable <br />
         question of <code>'who is Nishtha'</code>
       </p>
     </Window>

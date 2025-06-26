@@ -8,6 +8,7 @@
   --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
   --font-jm: "Jetbrains Mono";
+  --font-scp: "Source Code Pro";
   --color-bg: #efeeeb;
   --color-text: #4a4a4a;
   --color-primary: #f7d34f;
@@ -22,10 +23,10 @@
 }
 
 body {
-  font-family: var(--font-jm);
+  font-family: var(--font-scp);
   font-weight: 400;
   color: var(--color-text);
-  background-image: url("../public/dalle2.png");
+background-image: url("/bgfinal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
