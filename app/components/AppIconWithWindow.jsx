@@ -3,8 +3,7 @@ import { useState } from "react";
 import Icon from "./Icon";
 import Window from "./Window";
 
-
-let lastWinPos = {x:200, y:200};
+let lastWinPos = { x: 200, y: 50 };
 export default function AppIconWithWindow({
   iconSrc,
   label,
@@ -15,12 +14,19 @@ export default function AppIconWithWindow({
   const [position, setPosition] = useState({ x: 100, y: 100 });
 
   const openWindow = () => {
-    const shiftAmt = 20;
+    const shiftAmt = 30;
     let newX = lastWinPos.x + shiftAmt;
-    let newY = lastWinPos + shiftAmt;
-    const newPosition = {x:newX, y:newY};
+    let newY = lastWinPos.y + shiftAmt;
+    const maxX = window.innerWidth - 400;
+    const maxY = window.innerHeight - 300;
+
+    if (newX > maxX || newY > maxY) {
+      newX = 100;
+      newY = 100;
+    }
+    const newPosition = { x: newX, y: newY };
     setPosition(newPosition);
-    lastWinPos=newPosition;
+    lastWinPos = newPosition;
     setIsOpen(true);
   };
 
