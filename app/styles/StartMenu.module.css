@@ -2,7 +2,7 @@
   background-color: grey;
   position: fixed;
   bottom: 45px;
-  left: 0;
+  left: 2;
   width: 300px;
   min-height: 200px;
   z-index: 1000;
@@ -11,8 +11,7 @@
 }
 
 .menuContent {
-  list-style: none;
-  padding: 0;
+  padding: 8px;
   margin: 0;
   user-select: none;
 }
@@ -20,6 +19,7 @@
   margin: 3px;
 }
 .menuContent li {
+  list-style: none;
   margin: 8px 5px;
   cursor: pointer;
 }
