@@ -7,6 +7,7 @@ import Photos from "./iconList/Photos";
 import Contact from "./iconList/Contact";
 import Blog from "./iconList/Blog";
 import Video from "./iconList/Video";
+import Projects from "./iconList/Projects";
 
 export default function Desktop() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -19,6 +20,7 @@ export default function Desktop() {
       <Photos />
       <Contact />
       <Video />
+      <Projects />
     </>
   );
 }

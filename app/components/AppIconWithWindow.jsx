@@ -14,9 +14,10 @@ export default function AppIconWithWindow({
   const [position, setPosition] = useState({ x: 100, y: 100 });
 
   const openWindow = () => {
-    const shiftAmt = 30;
-    let newX = lastWinPos.x + shiftAmt;
-    let newY = lastWinPos.y + shiftAmt;
+    const shiftAmtX = 30;
+    const shiftAmtY = 50;
+    let newX = lastWinPos.x + shiftAmtX;
+    let newY = lastWinPos.y + shiftAmtY;
     const maxX = window.innerWidth - 400;
     const maxY = window.innerHeight - 300;
 
