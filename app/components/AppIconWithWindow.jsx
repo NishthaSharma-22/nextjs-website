@@ -30,7 +30,6 @@ export default function AppIconWithWindow({
     lastWinPos = newPosition;
     setIsOpen(true);
   };
-
   return (
     <>
       <Icon iconSrc={iconSrc} label={label} onClick={openWindow} />

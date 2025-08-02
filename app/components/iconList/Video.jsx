@@ -6,7 +6,18 @@ export default function Video() {
       iconSrc="/email.png"
       label="Video"
       windowTitle="video"
-      windowContent={<></>}
+      windowContent={
+        <>
+          <iframe
+            src="/games/banana_jump/index.html"
+            style={{
+              width: "1200px",
+              height: "675px",
+              border: "none",
+            }}
+          />
+        </>
+      }
     />
   );
 }

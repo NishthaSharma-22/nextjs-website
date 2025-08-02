@@ -8,13 +8,7 @@ export default function IntroCard({ onClose }) {
       initialPosition={{ x: 450, y: 200 }}
       onClose={onClose}
     >
-      <Image
-        src={"/nspfp.jpeg"}
-        width={100}
-        height={100}
-        alt={"Nishtha S's profile picture"}
-        style={{ borderRadius: "50%" }}
-      />
+
       <h1>nishthaOS</h1>
       <p>
         NishthaOS is a feature-limited{" "}
