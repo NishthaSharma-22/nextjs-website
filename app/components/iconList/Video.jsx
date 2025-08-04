@@ -8,14 +8,14 @@ export default function Video() {
       windowTitle="video"
       windowContent={
         <>
-          {/* <iframe
+          <iframe
             src="/games/banana_jump/index.html"
             style={{
               width: "1200px",
               height: "675px",
               border: "none",
             }}
-          /> */}
+          />
         </>
       }
     />
