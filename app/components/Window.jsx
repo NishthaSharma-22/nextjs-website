@@ -46,14 +46,19 @@ export default function Window({
         }}
       >
         <p className={styles.frameText}>{title}</p>
-        <button className={styles.closeBtn} onClick={(e) => {e.stopPropagation(); onClose();}}>
+        <button
+          className={styles.closeBtn}
+          onClick={(e) => {
+            e.stopPropagation();
+            onClose();
+          }}
+        >
           x
         </button>
 
         <div
           className={styles.introBox}
-          onMouseDown={(e) => e.stopPropagation()
-          }
+          onMouseDown={(e) => e.stopPropagation()}
         >
           {children}
         </div>
