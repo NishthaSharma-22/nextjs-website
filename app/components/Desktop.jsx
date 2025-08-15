@@ -6,7 +6,7 @@ import Linkedin from "./iconList/Linkedin";
 import Photos from "./iconList/Photos";
 import Contact from "./iconList/Contact";
 import Blog from "./iconList/Blog";
-import Video from "./iconList/Video";
+import Video from "./iconList/Game";
 import Projects from "./iconList/Projects";
 
 export default function Desktop() {
@@ -15,12 +15,12 @@ export default function Desktop() {
   return (
     <>
       {showWelcome && <IntroCard onClose={() => setShowWelcome(false)} />}
-      <Blog />
       <Linkedin />
       <Photos />
+      <Projects />
       <Contact />
       <Video />
-      <Projects />
+      <Blog />
     </>
   );
 }

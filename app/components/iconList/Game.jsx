@@ -1,11 +1,12 @@
 import AppIconWithWindow from "../AppIconWithWindow";
+import { FaGamepad } from "react-icons/fa";
 
 export default function Video() {
   return (
     <AppIconWithWindow
-      iconSrc="/email.png"
-      label="Video"
-      windowTitle="video"
+      iconSrc={<FaGamepad size={64} color="#e5e7e8ff" />}
+      label="Game"
+      windowTitle="Game"
       windowContent={
         <>
           <iframe

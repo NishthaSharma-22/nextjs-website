@@ -1,11 +1,12 @@
 import AppIconWithWindow from "../AppIconWithWindow";
 import projects from "@/app/data/projects";
 import styles from "../../styles/Projects.module.css";
+import { VscFileCode } from "react-icons/vsc";
 
 export default function Project() {
   return (
     <AppIconWithWindow
-      iconSrc="/email.png"
+      iconSrc={<VscFileCode size={64} color="#e5e7e8ff"/>}
       label="Projects"
       windowTitle="Projects"
       windowContent={

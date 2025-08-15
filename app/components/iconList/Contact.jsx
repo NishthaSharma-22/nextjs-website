@@ -1,9 +1,10 @@
 import AppIconWithWindow from "../AppIconWithWindow";
+import { MdOutlineMail } from "react-icons/md";
 
 export default function Contact() {
   return (
     <AppIconWithWindow
-      iconSrc="/email.png"
+      iconSrc={<MdOutlineMail size={64} color="#e5e7e8ff"/>}
       label="Contact"
       windowTitle="contact"
       windowContent={
