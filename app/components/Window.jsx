@@ -2,6 +2,8 @@
 import { useState, useRef } from "react";
 import styles from "../styles/Window.module.css";
 
+let overallZIndex = 2222; // ah i love 2s
+
 export default function Window({
   title = "window",
   initialPosition = { x: 100, y: 100 },
@@ -11,6 +13,7 @@ export default function Window({
   const [position, setPosition] = useState(initialPosition);
   const dragging = useRef(false);
   const offset = useRef({ x: 0, y: 0 });
+  const [zIndex, setZIndex] = useState(overallZIndex);
 
   const mouseDown = (e) => {
     dragging.current = true;
@@ -18,6 +21,8 @@ export default function Window({
       x: e.clientX - position.x,
       y: e.clientY - position.y,
     };
+    overallZIndex += 1;
+    setZIndex(overallZIndex);
   };
   const mouseMove = (e) => {
     if (dragging.current) {
@@ -43,6 +48,7 @@ export default function Window({
           left: position.x,
           top: position.y,
           position: "absolute",
+          zIndex: zIndex,
         }}
       >
         <p className={styles.frameText}>{title}</p>
