@@ -26,7 +26,7 @@ body {
   font-family: var(--font-scp);
   font-weight: 400;
   color: var(--color-text);
-  background-image: url("/new-bg-desktop.jpeg");
+  background-image: url("/flipped.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
