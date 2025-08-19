@@ -6,7 +6,7 @@ import { VscFileCode } from "react-icons/vsc";
 export default function Project() {
   return (
     <AppIconWithWindow
-      iconSrc={<VscFileCode size={64} color="#e5e7e8ff"/>}
+      iconSrc={<VscFileCode size={64} color="#e5e7e8ff" />}
       label="Projects"
       windowTitle="Projects"
       windowContent={
@@ -22,6 +22,13 @@ export default function Project() {
                 <h3>{project.name}</h3>
               </a>
               <p>{project.description}</p>
+              <div className={styles.tags}>
+                {project.tags?.map((tag, i) => (
+                  <span key={i} className={styles.tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>

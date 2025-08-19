@@ -28,3 +28,16 @@
 .link {
   text-decoration: none;
 }
+.tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  background-color: rgb(75, 75, 102);
+  color: white;
+  font-size: 15px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
