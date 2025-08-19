@@ -21,6 +21,8 @@
 
 .projIcon {
   height: 170px;
+  object-fit: contain;
+  max-width: 200px;
 }
 
 .link {

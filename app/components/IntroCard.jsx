@@ -4,23 +4,47 @@ import Window from "./Window";
 import styles from "../styles/Terminal.module.css";
 
 export default function IntroCard({ onClose }) {
-  const [lines, setLines] = useState([
-    "welcome to nishthaOS terminal. type 'help' for commands",
-  ]);
+  const initialText = [
+    `======================================================================
+███╗   ██╗██╗███████╗██╗  ██╗████████╗██╗  ██╗ █████╗  ██████╗ ███████╗
+████╗  ██║██║██╔════╝██║  ██║╚══██╔══╝██║  ██║██╔══██╗██╔═══██╗██╔════╝
+██╔██╗ ██║██║███████╗███████║   ██║   ███████║███████║██║   ██║███████╗
+██║╚██╗██║██║╚════██║██╔══██║   ██║   ██╔══██║██╔══██║██║   ██║╚════██║
+██║ ╚████║██║███████║██║  ██║   ██║   ██║  ██║██║  ██║╚██████╔╝███████║
+╚═╝  ╚═══╝╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+=======================================================================
+welcome to nishthaOS terminal. type 'help' for commands
+
+`,
+  ];
+
+  const [lines, setLines] = useState([initialText]);
   const [input, setInput] = useState("");
   const inputRef = useRef(null);
 
   const commands = {
     help: () =>
-      "available commands: help, about, clear, date, star, links, echo <msg>",
+      "available commands: help, about, clear, date, stars, github, echo <msg>",
     about: () =>
       "this is nishtha0S terminal - my very own terminal, gang. feel free to explore my projects, ideas and random stuff in a webOS styled way!",
     date: () => new Date().toString(),
     clear: () => {
-      setLines(["welcome to nishthaOS terminal. type 'help' for commands"]);
+      setLines([
+        `======================================================================
+███╗   ██╗██╗███████╗██╗  ██╗████████╗██╗  ██╗ █████╗  ██████╗ ███████╗
+████╗  ██║██║██╔════╝██║  ██║╚══██╔══╝██║  ██║██╔══██╗██╔═══██╗██╔════╝
+██╔██╗ ██║██║███████╗███████║   ██║   ███████║███████║██║   ██║███████╗
+██║╚██╗██║██║╚════██║██╔══██║   ██║   ██╔══██║██╔══██║██║   ██║╚════██║
+██║ ╚████║██║███████║██║  ██║   ██║   ██║  ██║██║  ██║╚██████╔╝███████║
+╚═╝  ╚═══╝╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+=======================================================================
+welcome to nishthaOS terminal. type 'help' for commands
+
+`,
+      ]);
       return "";
     },
-    star: () => `
+    stars: () => `
     ⠀⠀⠀⠀⠀⠀⠀⣀⡄⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠐⢿⠓⠀⢀⡴⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠹⡒⠤⣀⡀⠀⢀⡴⠋⢠⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -48,6 +72,10 @@ export default function IntroCard({ onClose }) {
     `,
     echo: (args) => args.join(" "),
     hi: () => "well hi! :)",
+    github: () => {
+      window.open("https://github.com/NishthaSharma-22/");
+      return "taking you to my github...";
+    },
   };
   const handleCommand = (raw) => {
     const [cmd, ...args] = raw.trim().split(" ");
