@@ -2,13 +2,15 @@ import AppIconWithWindow from "../AppIconWithWindow";
 import { useState } from "react";
 import post1 from "../../content/Posts/post1.mdx";
 import post2 from "../../content/Posts/post2.mdx";
+import post3 from "../../content/Posts/post3.mdx";
 import styles from "../../styles/Blog.module.css";
 import { FaFilePen } from "react-icons/fa6";
 
 export default function Blog() {
   const postsList = [
-    { title: "Post 1", Component: post1 },
-    { title: "Post 2", Component: post2 },
+    { title: "Hello world!", Component: post1 },
+    { title: "NCP Cards", Component: post2 },
+    { title: "Making an MCP", Component: post3 },
   ];
   const [selectedPost, setSelectedPost] = useState(postsList[0]);
   return (

@@ -3,13 +3,15 @@
   color: white;
   font-family: "Courier New", Courier, monospace;
   overflow-y: auto;
-  min-width: 900px;
+  width: 900px;
   height: 400px;
   padding: 10px;
   font-size: 15px;
   text-shadow: none;
   overflow-y: auto;
-  white-space: pre;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .inputContainer {

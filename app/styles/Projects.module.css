@@ -3,6 +3,10 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 10px;
+  margin: 3px 0;
+  overflow-y: auto;
+  max-height: 600px;
+  width: 1000px;
 }
 
 .projectCard {
@@ -13,10 +17,12 @@
   text-align: center;
   border-radius: 5px;
   transition: transform 0.2s, box-shadow 0.2s;
-  padding: 30px;
+  padding: 12px;
+  gap: 10px;
 }
 .projectCard:hover {
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgb(247, 245, 245);
 }
 
 .projIcon {
@@ -40,4 +46,18 @@
   font-size: 15px;
   padding: 4px 8px;
   border-radius: 12px;
+}
+
+.icons{
+  display: flex;
+  gap: 8px;
+}
+
+.projName{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 600;
 }
