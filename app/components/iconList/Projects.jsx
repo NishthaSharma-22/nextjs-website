@@ -2,6 +2,7 @@ import AppIconWithWindow from "../AppIconWithWindow";
 import projects from "@/app/data/projects";
 import styles from "../../styles/Projects.module.css";
 import { VscFileCode } from "react-icons/vsc";
+import { FaGithub, FaLink } from "react-icons/fa6";
 
 export default function Project() {
   return (
@@ -18,9 +19,30 @@ export default function Project() {
                 alt={project.name}
                 className={styles.projIcon}
               />
-              <a href={project.url} className={styles.link}>
-                <h3>{project.name}</h3>
-              </a>
+              <div className={styles.projName}>
+                {project.name}
+                <div className={styles.icons}>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub size={20} />
+                    </a>
+                  )}
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLink size={20} />
+                    </a>
+                  )}
+                </div>
+              </div>
+
               <p>{project.description}</p>
               <div className={styles.tags}>
                 {project.tags?.map((tag, i) => (
