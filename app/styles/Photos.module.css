@@ -1,23 +1,35 @@
-.photoContainer {
-  display: flex;
-  flex-wrap: wrap;
+.photosContainer {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(200, 1fr));
   gap: 12px;
-  padding: 16px;
-  overflow-y: auto;
-  height: 600px;
-  width: 900px;
+}
+.galleryItem {
+  position: relative;
+  /* overflow: hidden; */
+  cursor: pointer;
 }
 
-.photo {
-  max-width: 200px;
-  max-height: 200px;
-  width: auto;
-  height: auto;
+.galleryItem img {
+  width: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  display: block;
+  transition: transform 0.2s ease;
 }
-
-.photo:hover {
-  transform: scale(1.02);
+.galleryItem:hover img {
+  opacity: 70%;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 8px;
+  color: white;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.galleryItem:hover .overlay {
+  opacity: 1;
 }
