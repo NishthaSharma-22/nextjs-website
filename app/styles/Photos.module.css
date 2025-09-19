@@ -1,8 +1,12 @@
 .photosContainer {
-  padding: 10px;
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(200, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  margin: 3px 0;
+  overflow-y: auto;
+  max-height: 600px;
+  width: 1000px;
 }
 .galleryItem {
   position: relative;
@@ -11,7 +15,7 @@
 }
 
 .galleryItem img {
-  width: 50%;
+  width: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.2s ease;
