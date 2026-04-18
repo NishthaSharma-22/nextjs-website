@@ -16,7 +16,7 @@ export default function Desktop() {
   return (
     <>
       {showWelcome && <IntroCard onClose={() => setShowWelcome(false)} />}
-      <div className="grid grid-flow-col auto-cols-max grid-rows-5 gap-2">
+      <div className="grid grid-flow-col auto-cols-max grid-rows-5 gap-1">
         <Photos />
         <Projects />
         <Contact />
