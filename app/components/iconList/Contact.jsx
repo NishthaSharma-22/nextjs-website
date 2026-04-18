@@ -1,20 +1,20 @@
-import AppIconWithWindow from "../AppIconWithWindow";
+"use client";
 import { MdOutlineMail } from "react-icons/md";
+import Icon from "../Icon";
 
 export default function Contact() {
+  const openMail = () => {
+    window.open(
+      "https://mail.google.com/mail/?view=cm&to=nishthapinjore@gmail.com",
+      "_blank",
+    );
+  };
+
   return (
-    <AppIconWithWindow
-      iconSrc={<MdOutlineMail size={64} color="#e5e7e8ff"/>}
+    <Icon
+      iconSrc={<MdOutlineMail size={64} color="#e5e7e8ff" />}
       label="Contact"
-      windowTitle="contact"
-      windowContent={
-        <>
-          <p>My github link!</p>
-          <a href="https://github.com/NishthaSharma-22" target="_blank">
-            Github
-          </a>
-        </>
-      }
+      onClick={openMail}
     />
   );
 }
