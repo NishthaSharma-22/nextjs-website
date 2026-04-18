@@ -10,6 +10,7 @@ export default function Project() {
       iconSrc={<VscFileCode size={64} color="#e5e7e8ff" />}
       label="Projects"
       windowTitle="Projects"
+      defaultOpen={true}
       windowContent={
         <div className={styles.projsGrid}>
           {projects.map((project) => (
