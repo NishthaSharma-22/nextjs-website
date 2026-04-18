@@ -8,6 +8,7 @@ import Contact from "./iconList/Contact";
 import Blog from "./iconList/Blog";
 import Video from "./iconList/Game";
 import Projects from "./iconList/Projects";
+import Github from "./iconList/Github";
 
 export default function Desktop() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -15,12 +16,15 @@ export default function Desktop() {
   return (
     <>
       {showWelcome && <IntroCard onClose={() => setShowWelcome(false)} />}
+      <div className="grid grid-flow-col auto-cols-max grid-rows-5 gap-2">
       <Linkedin />
       <Photos />
       <Projects />
       <Contact />
+      <Github />
       <Video />
       <Blog />
+      </div>
     </>
   );
 }
