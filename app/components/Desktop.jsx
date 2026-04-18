@@ -17,13 +17,13 @@ export default function Desktop() {
     <>
       {showWelcome && <IntroCard onClose={() => setShowWelcome(false)} />}
       <div className="grid grid-flow-col auto-cols-max grid-rows-5 gap-2">
-      <Linkedin />
-      <Photos />
-      <Projects />
-      <Contact />
-      <Github />
-      <Video />
-      <Blog />
+        <Photos />
+        <Projects />
+        <Contact />
+        <Github />
+        <Linkedin />
+        <Video />
+        <Blog />
       </div>
     </>
   );
