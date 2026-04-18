@@ -13,7 +13,8 @@ export default function Window({
   const [position, setPosition] = useState(initialPosition);
   const dragging = useRef(false);
   const offset = useRef({ x: 0, y: 0 });
-  const [zIndex, setZIndex] = useState(overallZIndex);
+  const baseZ = title === "terminal"? 3000:2000;
+  const [zIndex, setZIndex] = useState(baseZ);
 
   const mouseDown = (e) => {
     dragging.current = true;

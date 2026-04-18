@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import Window from "./Window";
 
@@ -9,8 +9,9 @@ export default function AppIconWithWindow({
   label,
   windowTitle,
   windowContent,
+  defaultOpen = false,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const [position, setPosition] = useState({ x: 100, y: 100 });
 
   const openWindow = () => {
@@ -30,6 +31,10 @@ export default function AppIconWithWindow({
     lastWinPos = newPosition;
     setIsOpen(true);
   };
+  useEffect(() => {
+    if (defaultOpen) openWindow();
+  }, []);
+
   return (
     <>
       <Icon iconSrc={iconSrc} label={label} onClick={openWindow} />

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +25,7 @@
 }
 
 body {
-  font-family: var(--font-scp);
+  font-family: var(--font-jm);
   font-weight: 400;
   color: var(--color-text);
   background-image: url("/flipped.jpeg");

@@ -22,7 +22,7 @@ export default function Blog() {
         <>
           <div className={styles.blogWindow}>
             <div className={styles.sidebar}>
-              <h2>Posts</h2>
+              <h2 className="tracking-widest">Posts</h2>
               <ul>
                 {postsList.map((post, idx) => (
                   <li

@@ -1,5 +1,4 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
-import { Jetbrains_Mono } from "next/font/google";
 import { Press_Start_2P } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
@@ -15,10 +14,9 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+  variable: "--font-jm",
   subsets: ["latin"],
 });
-
 const pressStart2P = Press_Start_2P({
   variable: "--font-ps",
   subsets: ["latin"],
@@ -36,7 +34,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable}  antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
