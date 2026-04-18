@@ -62,6 +62,16 @@ const projects = [
   },
   {
     id: 7,
+    name: "Make Math Simple Tutor Website",
+    icon: "/projects/Tutor.png",
+    github: "",
+    url: "  https://www.makemathsimple.com/",
+    description:
+      "Tutoring website showcasing math tutoring pricing and session offerings, with integrated scheduling forms.",
+    tags: ["NextJS", "TailwindCSS"],
+  },
+  {
+    id: 8,
     name: "NishthaOS",
     icon: "/projects/WebOS.png",
     github: "https://github.com/NishthaSharma-22/nextjs-website",
@@ -71,7 +81,7 @@ const projects = [
   },
 
   {
-    id: 8,
+    id: 9,
     name: "voyagerpad",
     icon: "/projects/voyagerpad.png",
     github: "https://github.com/NishthaSharma-22/voyager-pad",
@@ -81,7 +91,7 @@ const projects = [
     tags: ["KiCad", "Python", "Fusion 360"],
   },
   {
-    id: 9,
+    id: 10,
     name: "XIAO-Timer",
     icon: "/projects/xiao-timer.png",
     github: "https://github.com/NishthaSharma-22/xiao-timer",
